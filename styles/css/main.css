@@ -1,18 +1,413 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 .container {
-  max-width: 1280px;
-  /*	margin: 0 auto;
-*/
-  background: url(../../assets/background.png);
+  width: 100%;
+}
+body {
+  font-family: 'Viga', helvetica, arial, sans-serif;
+}
+body p {
+  font-size: 1em;
+}
+header {
+  background-color: rgba(250, 250, 250, 0.46);
+  border-bottom: 7px solid #d35400;
+  padding-top: 10px;
+}
+header h1#logo {
+  background: url(../../assets/easy-as-pie-logo.svg) no-repeat;
+  background-size: 75px;
+  text-indent: -9999px;
+  height: 85px;
+  text-align: left;
+  margin: -5px 0 0 100px;
+}
+header #menuBtn {
+  visibility: hidden;
+}
+nav {
+  text-transform: uppercase;
+  font-size: 1em;
+}
+nav ul {
+  text-align: right;
+  margin: -60px 100px 0 0;
+}
+nav ul li {
+  display: inline-block;
+  padding: 30px 10px 20px 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+nav ul li a:hover {
+  border-bottom: 3px solid #d35400;
 }
 #hero {
   background: url(../../assets/pecan-pie.jpg) no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   height: 700px;
+  border-bottom: 7px solid #d35400;
 }
-nav {
+#description {
+  padding: 6px 10px;
+  margin: -220px 0px 0 10%;
+  background-color: rgba(250, 250, 250, 0.29);
+  width: 80%;
+}
+#description p {
+  font-family: serif;
+  text-align: left;
+  font-size: 2em;
+}
+article {
+  margin: 200px 0 0 0;
+}
+article .restaurantDetails {
+  float: left;
+  margin-left: 65px;
+  height: 430px;
+}
+article .restaurantDetails img {
+  height: 200px;
+  width: 300px;
+}
+article .restaurantDetails h2 {
+  text-transform: uppercase;
+  text-align: left;
+  padding: 30px 10px;
   color: #d35400;
-  font-size: 1.5em;
+}
+article .restaurantDetails p {
+  padding: 0 10px;
+  text-align: left;
+  width: 300px;
+  font-family: 'Viga', helvetica, arial, sans-serif;
+  font-size: 1em;
+}
+article .restaurantDetails .menuBtn {
+  text-align: right;
+  padding: 20px 0;
+}
+article .restaurantDetails .menuBtn a {
+  text-decoration: none;
+  color: #000;
+}
+article .restaurantDetails .menuBtn a:hover {
+  color: #d35400;
+  cursor: pointer;
+}
+#contact {
+  margin: 0 auto;
+  width: 85%;
+  background: url(../../assets/img-noise-361x370.png);
+  clear: both;
+}
+#contact p {
+  text-transform: uppercase;
+  text-align: left;
+  padding: 5px 0px 5px 20px;
+  font-size: 1em;
+  font-family: serif;
+}
+#contact h3 a {
+  text-align: center;
+  text-decoration: none;
+  font-family: serif;
+  font-size: 0.8em;
+  color: beige;
+  text-transform: uppercase;
+  margin: -43px 15px 0 0;
+  float: right;
+  width: 100px;
+  padding: 10px;
+  background-color: #d35400;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px #999;
+}
+#contact h3 a:hover {
+  cursor: pointer;
+  color: #000;
+}
+h1 {
+  font-family: sans-serif;
+  font-size: 1em;
+  margin: 40px 0 0 100px;
+}
+#contactInfo {
+  background-color: rgba(250, 250, 250, 0.46);
+  border: 1px solid #d35400;
+  width: 80%;
+  margin: 40px 0 0 100px;
+  padding: 20px 0 20px 19px;
+}
+#contactInfo p {
+  padding: 0 0 10px 0;
+}
+form {
+  background-color: rgba(250, 250, 250, 0.46);
+  border: 1px solid #d35400;
+  width: 80%;
+  padding: 50px 0 35px 19px;
+  margin: 0 0 0 100px;
+  text-align: left;
+}
+form h2 {
+  font-size: 1em;
+  font-family: sans-serif;
+  padding: 0 0 30px 0;
+  margin: -30px 0 0 0;
+}
+form input {
+  height: 30px;
+  width: 25%;
+}
+form input #delivery {
+  margin: 0 -100px 0 0;
+}
+form input#submitButton {
+  font-weight: bold;
+  border: none;
+  color: #000;
+  background-color: #d35400;
+  width: 75px;
+  height: 26px;
+  margin: 20px 0 0 64%;
+  box-shadow: 0 1px 2px #999;
+}
+form .formInput {
+  display: inline-block;
+  font-size: 0.8em;
+  text-align: center;
+  background-color: #d35400;
+  text-transform: uppercase;
+  width: 100px;
+  padding: 10px;
+  margin: 0px -4px 29px 0px;
+}
+form textarea#order {
+  width: 72%;
+  height: 100px;
+}
+form textarea:focus,
+form input:focus {
+  border: 2px solid #d35400;
+}
+h1#menuTitle {
+  font-size: 1em;
+  font-family: 'Viga', helvetica, arial, sans-serif;
+}
+section {
+  background-color: rgba(190, 177, 168, 0.14);
+  float: left;
+  width: 21%;
+  text-align: center;
+  margin: 21px;
+}
+section .container {
+  margin: 0 auto;
+}
+section .container h2 {
+  padding: 10px;
+  border-bottom: 2px solid #d35400;
+  font-size: 1em;
+}
+section .container img {
+  width: 70%;
+  padding: 10px 0;
+}
+footer {
+  background-color: rgba(250, 250, 250, 0.46);
+  text-transform: uppercase;
+  text-align: center;
+  border-top: 7px solid #d35400;
+  margin: 100px 0 0 0;
+  padding: 20px 0 0 0;
+  clear: both;
   width: 100%;
-  background-color: #000;
-  opacity: .opacity;
+}
+footer ul li {
+  display: inline-block;
+  padding: 10px 0;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #000;
+}
+footer ul li a:hover {
+  color: #d35400;
+}
+/*Tablet Media Query*/
+@media only screen and (max-width: 1024px) {
+  nav ul {
+    text-align: center;
+    margin: 0;
+  }
+  .container {
+    margin: 0 auto;
+  }
+  #hero {
+    height: 500px;
+  }
+  #contact h3 a {
+    margin: 0;
+    border-radius: 0;
+  }
+  #contact h3 a:hover {
+    color: #fff;
+    cursor: none;
+  }
+  #contactUsTitle {
+    margin: 40px 0 0 31px;
+  }
+  #contactInfo {
+    width: 95%;
+    margin: 75px 0px -1px 25px;
+  }
+  form {
+    margin: 0 auto;
+    width: 95%;
+    padding: 50px 0 35px 12px;
+  }
+  form h2 {
+    font-size: 1.2em;
+  }
+  form input {
+    height: 35px;
+    margin: 8px 0 48px 328px;
+  }
+  form input#submitButton {
+    font-size: 1em;
+    height: 26px;
+    margin: 50px 0 0 54%;
+  }
+  form .formInput {
+    display: list-item;
+    list-style: none;
+    font-size: 1em;
+    width: 25%;
+    margin: 0px 0 0 327px;
+  }
+  form textarea#order {
+    width: 25%;
+    height: 70px;
+    margin: 0px 0 0 327px;
+  }
+  form textarea:focus,
+  form input:focus {
+    border: 2px solid #d35400;
+    font-size: 1em;
+  }
+  #menu {
+    margin-left: 15%;
+  }
+  #menu section {
+    width: 35%;
+    margin: 20px;
+  }
+}
+/*Phone Media Query*/
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+  .container {
+    margin: 0 auto;
+  }
+  header h1#logo {
+    background: url(../../assets/pie-menu.svg) no-repeat;
+    background-size: 75px;
+    margin: 0 0px 0 40%;
+  }
+  nav {
+    font-size: 1em;
+  }
+  nav ul {
+    background-color: #d35400;
+  }
+  nav ul li a {
+    width: 100%;
+  }
+  nav ul li a:hover {
+    cursor: none;
+  }
+  #description {
+    width: auto;
+    background-color: #d35400;
+    margin: 0;
+  }
+  article {
+    margin: 50px 0 0 0;
+  }
+  article .restaurantDetails {
+    margin: 0 0 0 10px;
+  }
+  article .restaurantDetails img {
+    height: auto;
+    width: 250px;
+    margin: 0 0px 0 16px;
+  }
+  article .restaurantDetails p {
+    padding: 0;
+    font-size: 1.1em;
+  }
+  article .restaurantDetails .menuBtn {
+    text-align: left;
+  }
+  h1#contactUsTitle {
+    display: none;
+    margin: -999px;
+  }
+  #contactInfo {
+    width: 95%;
+    margin: 75px 0px -1px 13px;
+  }
+  form {
+    margin: 0 auto;
+    width: 95%;
+    padding: 50px 0 35px 12px;
+  }
+  form h2 {
+    font-size: 1.2em;
+  }
+  form input {
+    height: 35px;
+    width: 90%;
+    margin: -9px 0 40px 15px;
+  }
+  form input#submitButton {
+    font-size: 1em;
+    width: 90%;
+    height: 26px;
+    margin: 50px 0 0 15px;
+  }
+  form .formInput {
+    display: list-item;
+    list-style: none;
+    font-size: 1em;
+    width: 90%;
+    margin: 0px -4px 29px 15px;
+  }
+  form textarea#order {
+    width: 90%;
+    height: 70px;
+    margin: -24px 0 0 15px;
+  }
+  form textarea:focus,
+  form input:focus {
+    border: 2px solid #d35400;
+    font-size: 1em;
+  }
+  #menu {
+    margin-left: 15%;
+  }
+  #menu section {
+    width: 78%;
+    margin: 10px;
+  }
+  footer ul li {
+    display: list-item;
+  }
 }

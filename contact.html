@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Easy as pie</title>
+
+  <link rel="shortcut icon" href="images/favicon.png"> 
+  <link rel="apple-itouch-icon" href="images/favicon.png">
+
+    <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/css/reset.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="styles/css/main.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="styles/css/print.css" type="text/css" media="print" >
+  	<!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Overlock+SC' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    $("#logo").click(function(){
+      $("nav").slideToggle();
+    });
+  });
+  </script>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<div id="navBar">
+				<h1 id="logo"><a href="index.html">Easy as pie</h1>
+				<nav>			
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	</div>
+
+	<h1 id="contactUsTitle">Contact us</h1>
+	<div id="contactInfo">
+		<p>Address: 23 Oklahoma Village Rd Honolulu Hwy Toronto, Canada A1B 2C3 </p>
+		<p>Phone: (000) 000-0000</p>
+	</div>
+
+	<form>
+		<div class="container">
+			<h2>Place an order </h2>
+			<form id="order">
+		        <label>
+		            <div class="formInput">First name</div>
+		            <input type="text"/>
+		        </label>
+
+		 		<label>
+		            <div class="formInput">Last name</div>
+		            <input type="text"/>
+		        </label> 
+		        <br/>
+
+	          	<label>
+	            	<div class="formInput">Phone</div>
+	            	<input type="text"/>
+	          	</label>
+
+		        <label>
+		        	<div class="formInput">Email</div>
+		            <input type="text"/>
+		        </label>
+		        <br/>
+		        <br/>
+
+	         	<label>
+					<div class="formInput">Order</div>
+					<br>
+					<textarea id="order" name="order"></textarea>
+				</label>
+	         	<br/>
+
+	          	<input id="submitButton" type="submit"/>
+	        </form>
+		</div>	
+	</form>
+
+	<footer>
+		<p> © Copyright 2013 - Easy As Pie</p>
+		<ul>
+			<li><a href="index.html">Home |</a></li>
+			<li><a href="menu.html">Menu |</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</footer>
+</body>
+</html>

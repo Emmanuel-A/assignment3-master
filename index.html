@@ -6,6 +6,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta content="Responsive Assignment" name="Emmanuel Amponsah"/> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Easy as pie</title>
 
   <link rel="shortcut icon" href="images/favicon.png"> 
@@ -17,32 +18,86 @@
   <link rel="stylesheet" href="styles/css/print.css" type="text/css" media="print" >
   	<!-- Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Overlock+SC' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    $("#navBar").click(function(){
+      $("nav").slideToggle();
+    });
+  });
+  </script>
 </head>
+
 <body>
 	<div class="container">
-		<div id="hero">
+		<div id="hero" class="container">
 			<header>
-				<nav>
-					<ul>
-						<li>Home</li>
-						<li>Menu</li>
-						<li>Contact</li>
-					</ul>
-				</nav>
+				<div id="navBar">
+				<h1 id="logo"><a href="index.html">Easy as pie</h1>
+					<nav>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="menu.html">Menu</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
 			</header>
+		</div>
+
+
+			<div id="description">
+				<p>Welcome to our website. Our menu features hand crafted specialties made fresh daily. We take a unique approach to many classic or traditional favorites. We call it glorified grandma comfort food.</p>
+			</div>
 
 			<article>
-				<h1>Easy as Pie</h1>
-				<p>Welcome to our website. We are a </p>
+				<div class="container">
+				<ul>
+					<li>
+						<div class="restaurantDetails">
+							<img src="assets/pumpkinPie-framed.jpg">
+							<h2>Delivery</h2>
+							<p>We deliver! Order a family size pie today and we will deliver it for you to enjoy at home</p>
+							<p class="menuBtn"><a href="menu.html">Menu &#62 </a></p>
+						</div>
+					</li>
+
+					<li>
+						<div class="restaurantDetails">
+							<img src="assets/caramelApplePie-framed.jpg">
+							<h2>Specials</h2>
+							<p>Come in and try our new specials. Today we have Caramel Apple Pie on sale for just $7.99
+							</p>
+							<p class="menuBtn"><a href="menu.html">Menu &#62</a></p>
+						</div>
+					</li>	
+
+					<li>
+						<div class="restaurantDetails">
+							<img src="assets/cottagePie-framed.jpg">
+							<h2>Dine in</h2>
+							<p>Table for two? Bring your guest to our restaurant for a delicious dinner. <br> Reservations for tables, call: (000) 000 - 000</p>
+							<p class="menuBtn"><a href="menu.html">Menu &#62 </a></p>
+						</div>
+					</li>					
+				</ul>
+				</div>
 			</article>
-		</div>
+
+			<div id="contact">
+				<p>We are located at 123 Oklahoma Village Rd Honolulu Hwy Toronto, Canada A1B 2C3</p> <p>Call to place an order (000) 000 - 000, or place an order online</p>
+				<h3><a href="contact.html">Contact us</a></h3>
+			</div>
+		
 		<footer>
-			<p>Copyright 2013 ©Easy As Pie</p>
+			<p> © Copyright 2013 - Easy As Pie</p>
 			<ul>
-				<li>Home |</li>
-				<li>Menu |</li>
-				<li>Contact</li>
+				<li><a href="index.html">Home |</a></li>
+				<li><a href="menu.html">Menu |</a></li>
+				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</footer>
 	</div>	

@@ -2,23 +2,440 @@
 @import 'includes/typography.less';
 @import 'includes/mixins.less';
 
+*{
+	.box-sizing();
+}
+
 .container{
-	max-width: 1280px;
-/*	margin: 0 auto;
-*/	background:url(../../assets/background.png);
+	width: 100%;
+}
+
+body{
+	font-family: @bodyFontFamily;
+	p{
+		font-size: @bodyFontSize;
+	}
+}
+
+header{
+	background-color: @transparentBackground;
+	border-bottom: 7px solid @pumpkin;
+	padding-top: 10px;
+h1#logo{
+		background:url(../../assets/easy-as-pie-logo.svg) no-repeat;
+		background-size: 75px;
+		text-indent: -9999px;
+		height: 85px;
+		text-align: left;
+		margin: -5px 0 0 100px;
+	}#menuBtn{
+		visibility: hidden;
+	}
+}
+
+nav{
+	text-transform: uppercase;
+	font-size: 1em;
+	ul{
+		text-align: right;
+		margin:-60px 100px 0 0;
+		li{
+			display: inline-block;
+			padding: 30px 10px 20px 20px;
+			a{
+				text-decoration: none;
+				color: #000;
+			&:hover{
+				border-bottom: 3px solid @pumpkin;
+				}
+			}
+		}
+	}
 }
 
 #hero{
 	background:url(../../assets/pecan-pie.jpg) no-repeat;
-	background-size: 100%;
+	background-size: cover;
+	background-position: center;
 	height: 700px;
+	border-bottom: 7px solid @pumpkin;
+}
+
+#description{
+	padding: 6px 10px;
+	margin:-220px 0px 0 10%;
+	background-color:rgba(250, 250, 250, 0.29); 
+	width: 80%;
+	p{
+		font-family: serif;
+		text-align: left;
+		font-size: @headingFontSize;
+	}
+}
+
+article{
+	margin: 200px 0 0 0;
+	.restaurantDetails{
+		float: left;
+		margin-left: 65px;
+		height: 430px;
+		img{
+			height: 200px;
+			width: 300px;
+		}
+		h2{
+			text-transform: uppercase;
+			text-align: left;
+			padding: 30px 10px;
+			color: @pumpkin;
+		}
+		p{			
+			padding: 0 10px;
+			text-align: left;
+			width: 300px;
+			font-family: @bodyFontFamily;
+			font-size: @bodyFontSize;
+		}
+		.menuBtn {
+			text-align: right;
+			padding: 20px 0;
+			a{
+				text-decoration: none;
+				color: #000;
+			}
+		}
+		.menuBtn a:hover{
+			color: @pumpkin;
+			cursor: pointer;
+		}
+	}
+}
+
+#contact{
+	margin: 0 auto;
+	width: 85%;
+	background: url(../../assets/img-noise-361x370.png);
+	clear: both;
+	p{
+		text-transform: uppercase;
+		text-align: left;
+		padding: 5px 0px 5px 20px;
+		font-size: @bodyFontSize;	
+		font-family: serif;
+	}
+	h3 a{
+		text-align: center;
+		text-decoration: none;
+		font-family: serif;
+		font-size: 0.8em;
+		color: beige;
+		text-transform: uppercase;
+		margin: -43px 15px 0 0;
+		float: right;
+		width: 100px;
+		padding: 10px;
+		background-color:@pumpkin; 
+		.roundBtn();
+		.shadow();
+	&:hover{
+		cursor: pointer;
+		color: #000;
+		}
+	}
+}
+
+h1{
+	font-family: sans-serif;
+	font-size: 1em;
+	margin: 40px 0 0 100px;
+}
+
+#contactInfo{
+	background-color: @transparentBackground;
+	border: 1px solid @pumpkin;	
+	width: 80%;
+	margin: 40px 0 0 100px;
+	padding: 20px 0 20px 19px;
+	p{
+		padding: 0 0 10px 0;
+	}
+}
+
+form{
+	background-color: @transparentBackground;
+	border: 1px solid @pumpkin;
+	width: 80%;
+	padding: 50px 0 35px 19px;
+	margin: 0 0 0 100px;
+	text-align: left;
+	h2{
+		font-size: 1em;
+		font-family: sans-serif;
+		padding: 0 0 30px 0;
+		margin: -30px 0 0 0;
+	}
+	input{
+		height: 30px;
+		width: 25%;
+		#delivery{
+			margin: 0 -100px 0 0;
+		}
+	}
+	input#submitButton{
+		font-weight: bold;
+		border: none;
+		color: #000;	
+		background-color:@pumpkin; 
+		width: 75px;
+		height: 26px;
+		margin: 20px 0 0 64%;
+		.shadow();
+	}
+	.formInput{
+		display: inline-block;
+		font-size: 0.8em;
+		text-align: center;
+		background-color: @pumpkin;
+		text-transform: uppercase;
+		width: 100px;
+		padding: 10px;
+		margin: 0px -4px 29px 0px
+	}
+	textarea#order{
+		width: 72%;
+		height: 100px;
+	}
+	textarea:focus, input:focus{
+		border: 2px solid @pumpkin;
+	}
+}
+
+h1#menuTitle{
+	font-size: @bodyFontSize;
+	font-family: @bodyFontFamily;
+}
+section{
+	background-color: rgba(190, 177, 168, 0.14);
+	 float: left;
+	 width: 21%;
+	 text-align: center;
+	 margin: 21px;
+	.container{
+		 margin: 0 auto;
+		h2{
+			padding: 10px;
+			border-bottom: 2px solid @pumpkin;
+			font-size: @bodyFontSize;
+		}	
+		img{
+			width: 70%;
+			padding: 10px 0;
+		}
+	}
+}
+
+
+footer{
+	background-color:@transparentBackground; 
+	text-transform: uppercase;
+	text-align: center;
+	border-top: 7px solid @pumpkin;
+	margin: 100px 0 0 0;
+	padding: 20px 0 0 0;
+	clear: both;
+	width: 100%;
+	ul{
+		li{
+			display: inline-block;
+			padding: 10px 0;
+			a{
+				text-decoration: none;
+				color: #000;
+			&:hover{
+				color: @pumpkin;
+				}
+			}
+		}
+	}
+}
+
+/*Tablet Media Query*/
+@media only screen and (max-width: 1024px) {
+nav ul{
+	text-align: center;
+	margin: 0;
+}
+  .container {
+  	margin: 0 auto;
+}
+  #hero{
+  	height: 500px;
+}
+  #contact h3 a{
+  	margin: 0;
+  	border-radius: 0;
+  	&:hover{
+  	color: #fff;
+  	cursor: none;
+  	}
+  }
+#contactUsTitle{
+	margin: 40px 0 0 31px;
+}
+#contactInfo{
+	width: 95%;
+	margin: 75px 0px -1px 25px;
+}	
+form{
+	margin: 0 auto;
+	width: 95%;
+	padding: 50px 0 35px 12px;	
+	h2{
+		font-size: 1.2em;
+	}
+	input{
+		height: 35px;
+		margin: 8px 0 48px 328px;
+	}
+	input#submitButton{
+		font-size: @bodyFontSize;
+		height: 26px;
+		margin: 50px 0 0 54%;
+	}
+	.formInput{
+		display: list-item;
+		list-style: none;	
+		font-size: @bodyFontSize;
+		width: 25%;
+		margin: 0px 0 0 327px;
+	}
+	textarea#order{
+		width: 25%;
+		height: 70px;
+		margin: 0px 0 0 327px;
+	}
+	textarea:focus, input:focus{
+		border: 2px solid @pumpkin;
+		font-size: @bodyFontSize;
+	}
+}
+
+		#menu{
+		margin-left: 15%;
+		section{
+			width: 35%;
+			margin: 20px;
+		}
+	}
+}
+
+/*Phone Media Query*/
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+	.container{
+		margin: 0 auto;
+	}
+	header{
+	h1#logo{
+		background: url(../../assets/pie-menu.svg) no-repeat;	
+		background-size: 75px;
+		margin: 0 0px 0 40%;
+	}
 }
 
 nav{
-	color: @pumpkin;
-	font-size: 1.5em;
-	width: 100%;
-	background-color: #000;
-	opacity: .opacity;
+	font-size: @bodyFontSize;
+    ul {	
+      	background-color: @pumpkin;
+	    li a{
+	    width: 100%;
+	    &:hover{
+	      cursor:none;
+        }
+      }
+    }
+  }
+	#description{
+		width: auto;
+		background-color:@pumpkin;
+		margin: 0;
+	}
+
+	article{
+		margin: 50px 0 0 0;
+			.restaurantDetails {
+				margin: 0 0 0 10px; 
+			img{
+				height: auto;
+				width: 250px;
+				margin: 0 0px 0 16px;
+			}
+			p{
+				padding: 0;
+				font-size: 1.1em;
+			}
+			.menuBtn{
+				text-align: left;
+			}
+		}
+	}
+h1#contactUsTitle{
+	display: none;
+	margin: -999px;
+}
+#contactInfo{
+	width: 95%;
+	margin: 75px 0px -1px 13px;
+}	
+form{
+	margin: 0 auto;
+	width: 95%;
+	padding: 50px 0 35px 12px;	
+	h2{
+		font-size: 1.2em;
+	}
+	input{
+		height: 35px;
+		width: 90%;
+		margin: -9px 0 40px 15px;
+	}
+	input#submitButton{
+		font-size: @bodyFontSize;
+		width: 90%;
+		height: 26px;
+		margin: 50px 0 0 15px;
+	}
+	.formInput{
+		display: list-item;
+		list-style: none;	
+		font-size: @bodyFontSize;
+		width: 90%;
+		margin: 0px -4px 29px 15px;
+	}
+	textarea#order{
+		width: 90%;
+		height: 70px;
+		margin: -24px 0 0 15px;
+	}
+	textarea:focus, input:focus{
+		border: 2px solid @pumpkin;
+		font-size: @bodyFontSize;
+	}
+}
+
+#menu{
+	margin-left: 15%;
+	section{
+		width: 78%;
+		margin: 10px;
+	}
+}
+
+	footer{
+		ul{
+			li{
+				display: list-item;
+			}
+		}
+	}
 }
 
